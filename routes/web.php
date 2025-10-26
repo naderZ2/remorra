@@ -12,7 +12,17 @@ use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Http\Client\Events\RequestSending;
 
-// Route::get('test')->name('');
+use App\Http\Controllers\Admin\TalentApplicationController;
+use App\Http\Controllers\Admin\TalentRequestController;
+
+// Admin Talent Application Routes
+Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin'], 'as' => 'admin.'], function () {
+    Route::get('talent-applications', [TalentApplicationController::class, 'index'])->name('talent-applications.index');
+    Route::get('talent-applications/{id}', [TalentApplicationController::class, 'show'])->name('talent-applications.show');
+    Route::get('talent-requests', [TalentRequestController::class, 'index'])->name('talent-requests.index');
+    Route::get('talent-requests/{id}', [TalentRequestController::class, 'show'])->name('talent-requests.show');
+});
+
 Route::view('test2', 'test')->name('test');
 Route::view('terms_ar', 'terms_ar');
 Route::view('terms_en', 'terms_en');

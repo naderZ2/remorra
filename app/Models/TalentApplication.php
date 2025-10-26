@@ -28,4 +28,13 @@ class TalentApplication extends Model
         'start_date',
         'referral_source',
     ];
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_id');
+    }
+    public function risen()
+    {
+        return $this->belongsTo(City::class, 'risen_id');
+    }
 }

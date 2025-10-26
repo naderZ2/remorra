@@ -66,15 +66,17 @@
 
 
 					<li class="sidebar-list">
-						<a class="sidebar-link sidebar-title {{ request()->route()->uri() == 'users/clients' ? 'active' : '' }}" href="#"><i data-feather="users"></i>
-							<span class="lan-7">{{ trans('lang.Clients') }}</span>
-							<div class="according-menu"><i class="fa fa-angle-{{ request()->route()->uri() == 'users/clients' ? 'down' : 'right' }}"></i></div>
+						<a class="sidebar-link sidebar-title {{ request()->route()->uri() == 'talent-applications' ? 'active' : '' }}" href="#"><i data-feather="briefcase"></i>
+							<span class="lan-7">{{ trans('lang.Applications') }}</span>
+							<div class="according-menu"><i class="fa fa-angle-{{ request()->route()->uri() == 'talent-applications' ? 'down' : 'right' }}"></i></div>
 						</a>
-						
-	                    <ul class="sidebar-submenu" style="display: {{ request()->route()->uri() == 'users/clients' ? 'block;' : 'none;' }}">
-							<li><a href="{{ route('admin.clients') }}" class="{{ Route::currentRouteName() == 'admin.clients' ? 'active' : '' }}">{{ trans('lang.Clients') }}</a></li>
-                      </ul>
-                  	</li>
+						<ul class="sidebar-submenu" style="display: {{ request()->route()->uri() == 'talent-applications' ? 'block;' : 'none;' }}">
+							<li><a href="{{ route('admin.talent-applications.index') }}" class="{{ Route::currentRouteName() == 'talent-applications.index' ? 'active' : '' }}">{{ trans('lang.Talent_Applications') }}</a></li>
+						</ul>
+						<ul class="sidebar-submenu" style="display: {{ request()->route()->uri() == 'talent-requests' ? 'block;' : 'none;' }}">
+							<li><a href="{{ route('admin.talent-requests.index') }}" class="{{ Route::currentRouteName() == 'talent-requests.index' ? 'active' : '' }}">{{ trans('lang.Talent_Requests') }}</a></li>
+						</ul>
+					</li>
 
 
 			
