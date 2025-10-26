@@ -147,7 +147,7 @@
         <li class="language-nav">
           <div class="translate_wrapper">
             <div class="current_lang">
-              <div class="lang"><i class="flag-icon flag-icon-{{ (App::getLocale() == 'en') ? 'us' : 'kw' }}"></i><span class="lang-txt">{{ App::getLocale() }} </span></div>
+              <div class="lang"><i class="flag-icon flag-icon-{{ (App::getLocale() == 'en') ? 'us' : 'eg' }}"></i><span class="lang-txt">{{ App::getLocale() }} </span></div>
             </div>
             <div class="more_lang">
               <a href="{{ route('lang', 'en' )}}" class="{{ (App::getLocale()  == 'en') ? 'active' : ''}}">

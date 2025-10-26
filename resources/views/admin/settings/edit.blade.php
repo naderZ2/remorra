@@ -52,7 +52,7 @@
                                 <div class="invalid-feedback">Please choose a insta.</div>
 
 							</div>
-
+{{-- 
 							<div class="col-md-6 mb-3">
 								<label for="validationCustom01">@lang('lang.instance')</label>
 								<input class="form-control" id="validationCustom01" type="text" name="instance_id" value="{{ $settings->instance_id}}" required="">
@@ -66,12 +66,8 @@
                                 <div class="invalid-feedback">Please choose a access_token.</div>
 							</div>
 
-							<div class="col-md-6 mb-3">
-								<label for="validationCustom01">@lang('lang.delivery_fee')</label>
-								<input class="form-control" id="validationCustom01" type="text" name="delivery_fee" value="{{ $settings->delivery_fee}}" required="">
-								<div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Please choose a access_token.</div>
-							</div>
+						
+							--}}
 				
 						
 					</div>
